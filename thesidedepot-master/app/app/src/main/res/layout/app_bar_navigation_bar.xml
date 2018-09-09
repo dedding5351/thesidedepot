@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/calLin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/monthBack"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="13dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_action_back" />
+
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/monthForward"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="13dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_action_forward" />
+    </LinearLayout>
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="220dp"
+        android:layout_marginTop="130dp"
+        app:compactCalendarBackgroundColor="#00FFFFFF"
+        app:compactCalendarCurrentDayBackgroundColor="#00FFFFFF"
+        app:compactCalendarCurrentDayTextColor="#FE6600"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#FE6600"
+        app:compactCalendarCurrentSelectedDayTextColor="#FFF"
+        app:compactCalendarMultiEventIndicatorColor="#fff"
+        app:compactCalendarTargetHeight="250dp"
+        app:compactCalendarTextColor="#000"
+        app:compactCalendarTextSize="12sp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="106dp"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/compactcalendar_view"
+        android:layout_below="@id/compactcalendar_view"
+        android:layout_marginTop="250dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home Master Journey"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar7"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:max="40"
+            android:progress="0"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:max="10"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DIY/Decor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBar6"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:max="10"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Renovation"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:max="10"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maintenance"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBar5"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:max="10"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Outdoor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/projectButton"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Current Project"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/nav_button"
+        android:layout_width="31dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/navbar" />
+
+
+</RelativeLayout>
